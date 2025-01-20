@@ -176,8 +176,7 @@ def summarize_data(cursor):
         ''', vote)
 
 def main():
-    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    db_file_name = f'./senators{timestamp}.db'
+    db_file_name = f'./senators.db'
 
     print(db_file_name)
     conn = sqlite3.connect(db_file_name)
@@ -185,7 +184,7 @@ def main():
 
     create_schema(cursor)
 
-    with open('senators_20250119_205841.json', 'r', encoding='latin-1') as json_file:
+    with open('senators.json', 'r', encoding='latin-1') as json_file:
         data = json.load(json_file)
 
     insert_data(cursor, data, conn)

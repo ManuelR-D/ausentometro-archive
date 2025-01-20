@@ -76,9 +76,7 @@ if __name__ == "__main__":
                 continue
             all_senators.extend(senators)
     
-    from datetime import datetime
-    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-    json_filename = f'senators_{timestamp}.json'
+    json_filename = f'senators.json'
 
     with open(json_filename, 'w', encoding='latin-1') as json_file:
         json.dump(all_senators, json_file, ensure_ascii=False, indent=4)
