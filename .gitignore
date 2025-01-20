@@ -1,0 +1,5 @@
+ausentometro-frontend
+*.exe
+*.json
+*.db
+detalleActas
