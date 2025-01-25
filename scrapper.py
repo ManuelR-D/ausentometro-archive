@@ -7,6 +7,7 @@ for i in range(1, 2523):
     if response.status_code == 200:
         print(f"Acta {i} encontrada")
         
+        # Save the response to a file
         with open(f"./detalleActas/acta_{i}.html", "w") as file:
             file.write(response.text)
     else:
